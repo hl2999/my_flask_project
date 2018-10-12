@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+ <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <h1>input the limit</h1>
+        {{ form.xlow }}
+        {{ form.xhigh }}
+        <div>{{ form.plot()}}</div>
+
+ </form>
+
+<img src={{plot_url}}>
+
+</body>
+
+{% endblock %}

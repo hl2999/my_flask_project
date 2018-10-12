@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+ <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <h1>input the coefficient</h1>
+        {{ form.coefficient }}
+        <div>{{ form.plot()}}</div>
+
+ </form>
+
+<img src={{plot_url}}>
+
+</body>
+{% endblock %}
