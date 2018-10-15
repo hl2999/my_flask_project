@@ -13,3 +13,10 @@ models, forms, routes, html file
 4. in html, you decide where to put the forms
 
 5. in models, the database is defined
+
+# github note
+
+1. git pull
+2. git add -A
+3. git commit -m "xxx"
+4. git push
