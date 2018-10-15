@@ -20,3 +20,5 @@ models, forms, routes, html file
 2. git add -A
 3. git commit -m "xxx"
 4. git push
+
+# add some changes locally
