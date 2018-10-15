@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, flash
-from app.forms import InputForm, PlotForm, EnergyPlotForm
+from app.forms import InputForm, PlotForm, EnergyPlotForm, RegisterForm
 import pandas as pd
 
 
@@ -66,7 +66,7 @@ def build_plot():
 def pictures():
     return render_template("pictures.html")
 
-df = pd.read_excel(r'C:\Users\apple\Desktop\EIS\301W45th\eQUEST_CHP_files_9.20\result-final-forplotting.xlsx')
+# df = pd.read_excel(r'C:\Users\apple\Desktop\EIS\301W45th\eQUEST_CHP_files_9.20\result-final-forplotting.xlsx')
 @app.route('/energyplot', methods=['GET', 'POST'])
 def energyplot():
 
@@ -95,3 +95,8 @@ def energyplot():
 
         return render_template('energy.html', form=form, plot_url=plot_url)
     return render_template('energy.html', form=form)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    return render_template('register.html', form=form)
